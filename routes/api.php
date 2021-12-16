@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('getUser/{id}', 'Api\MessageController@getUser')->name('api.get-user');
+Route::get('getChatList/{to}', 'Api\MessageController@getChatLists')->name('api.get-chat-list');
+Route::get( 'getMessage/{from}/{to}', 'Api\MessageController@getMessage')->name('api.get-message-from');
+// Route::get('getMessageFrom/{from}', 'Api\MessageController@getMessage')->name('api.get-message-from');
+Route::post('sendMessage', 'Api\MessageController@sendMessage')->name('api.send-message');
