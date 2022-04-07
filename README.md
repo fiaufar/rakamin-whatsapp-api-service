@@ -1,4 +1,4 @@
-## Rakamin Chat App
+## Simple Real Time Chat App
 
 How to run project : 
 
